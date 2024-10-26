@@ -1,0 +1,157 @@
+/* assets/css/extended/events.css */
+
+/* Events List Container */
+.events-list {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Event Card */
+.event-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+  background: var(--entry);
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+/* Event Title */
+.event-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.event-card h3 a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.event-card h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Event Meta Information */
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.event-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Using subtle icons */
+.event-date::before {
+  content: "→";
+  color: var(--primary);
+}
+
+.event-time::before {
+  content: "⌚";
+  opacity: 0.7;
+}
+
+.event-venue::before {
+  content: "◎";
+  color: var(--primary);
+}
+
+/* Registration Button */
+.registration-button a,
+.register-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.registration-button a:hover,
+.register-button:hover {
+  background: var(--primary);
+  color: var(--theme);
+}
+
+/* Individual Event Page Details */
+.event-details {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+  background: var(--entry);
+}
+
+.event-details .detail {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.event-details .detail:last-child {
+  border-bottom: none;
+}
+
+.event-details strong {
+  color: var(--primary);
+  min-width: 100px;
+}
+
+/* Registration Section */
+.registration-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .events-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .event-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .event-details .detail {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+/* Featured Event Styling */
+.event-card.featured {
+  border-left: 3px solid var(--primary);
+}
+
+/* Optional: Add subtle hover effect to event details */
+.event-details:hover {
+  border-color: var(--primary);
+}
+
+/* Optional: Add a subtle transition for dark/light mode */
+.event-card,
+.event-details,
+.registration-button a,
+.register-button {
+  transition: all 0.3s ease;
+}

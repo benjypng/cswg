@@ -1,4 +1,19 @@
-baseURL: https://example.org/
+baseURL: https://cswg.catholic.sg
 languageCode: en-us
-title: My New Hugo Site
+title: "Catholic Social Workers Guild"
 theme: ["PaperMod"]
+
+menu:
+  main:
+    - identifier: our-leadership
+      name: Our Leadership
+      url: /our-leadership/
+      weight: 10
+    - identifier: Events
+      name: Events
+      url: /events/
+      weight: 20
+    - identifier: contact
+      name: Contact
+      url: https://docs.google.com/forms/d/e/1FAIpQLScjPqfFF_P--5Em8G9CgUlQX7u-IUNusTlNjjvTtiRhgrNUXQ/viewform
+      weight: 30
