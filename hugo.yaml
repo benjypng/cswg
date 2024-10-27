@@ -17,3 +17,6 @@ menu:
       name: Contact
       url: https://docs.google.com/forms/d/e/1FAIpQLScjPqfFF_P--5Em8G9CgUlQX7u-IUNusTlNjjvTtiRhgrNUXQ/viewform
       weight: 30
+
+params:
+  defaultTheme: light
