@@ -5,9 +5,13 @@ description: "We are a community of Catholic Social Workers committed to integra
 
 > We are a community of Catholic Social Workers committed to integrating our faith and professional calling. Our Guild’s mission is to reflect God’s love through our service to the Church and society while promoting the spiritual and professional development of our members.
 
-## Our Values
+## Vision
 
-We strive to embody core Catholic principles of Charity, Solidarity, and the preferential posture to Serve the poor in society.
+A visible sign of God's love in serving.
+
+## Mission
+
+Promote spiritual and professional development of Catholic social workers.
 
 ## Our Journey
 
@@ -17,4 +21,4 @@ From an initial group of six, we have grown to 80 members who are trained profes
 
 ## The Guild
 
-Our Guild encompasses a diverse group of social work professionals from various sectors, including healthcare, education, and community development. Over the years, we have conducted prayer sessions, prayer experiences, talks where we share our experiences, support one another, and pray for those we serve.
+Our Guild encompasses a diverse group of social work professionals from various sectors, including healthcare, education, and community. Over the years, we have conducted prayer sessions, prayer experiences, talks where we share our experiences, support one another, and pray for those we serve.
