@@ -47,11 +47,10 @@ jobs:
           HUGO_ENV: production
         run: hugo --minify
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v1  # Correct uploader for GitHub Pages
         with:
-          name: hugo-site  # Ensure artifact name consistency
-          path: ./public
+          path: ./public  # Must be the built Hugo site
 
   # Deployment job
   deploy:
@@ -61,14 +60,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: hugo-site  # Must match the upload artifact name
-          path: ./public
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: hugo-site  # Use artifact_name, NOT artifact_path
