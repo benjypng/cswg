@@ -70,7 +70,6 @@ jobs:
       - name: Upload to GitHub Pages
         uses: actions/upload-artifact@v4  # Upload for GitHub Pages
         with:
-          name: github-pages  # This artifact name is CRUCIAL
           path: ./public  # Hugo's output directory
 
       - name: Deploy to GitHub Pages
