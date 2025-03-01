@@ -7,7 +7,6 @@ venue: "Cana, 55 Waterloo Street, Level 2, St Emma"
 description: "Social Work Day Mass and Fellowship 2025"
 draft: false
 ---
-
 *No registration needed*
 
 ![](images/2025-03-14_sw-day-mass.jpeg)
