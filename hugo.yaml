@@ -1,7 +1,7 @@
 baseURL: https://cswg.catholic.sg
 languageCode: en-us
 title: "Catholic Social Workers Guild"
-theme: ["PaperMod"]
+theme: ["paper-mod"]
 
 menu:
   main:
