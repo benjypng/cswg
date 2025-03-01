@@ -22,3 +22,7 @@ From an initial group of six, we have grown to 80 members who are trained profes
 ## The Guild
 
 Our Guild encompasses a diverse group of social work professionals from various sectors, including healthcare, education, and community. Over the years, we have conducted prayer sessions, prayer experiences, talks where we share our experiences, support one another, and pray for those we serve.
+
+## Events
+
+We organise a series of events throughout the year, and would love for you to join us. Please register at the respective event pages below!
