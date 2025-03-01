@@ -42,13 +42,16 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: hugo --minify
+        run: |
+          hugo --minify
+          find ./public -type l -delete  # DELETE SYMLINKS (Fixes deploy issue)
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages  # This artifact name is CRUCIAL
-          path: ./public  # Hugo's output directory
+          name: github-pages
+          path: ./public
+          retention-days: 1  # Keep it lightweight
 
   # Deployment job
   deploy:
@@ -61,16 +64,19 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: github-pages  # Must match the uploaded artifact name
-          path: ./public  # Restore to expected location
+          name: github-pages
+          path: ./public
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - name: Verify artifact size
+        run: du -sh ./public  # Show the total size of the artifact
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4  # Must be v4 for compatibility
 
       - name: Upload to GitHub Pages
-        uses: actions/upload-artifact@v4  # Upload for GitHub Pages
+        uses: actions/upload-artifact@v4
         with:
-          path: ./public  # Hugo's output directory
+          path: ./public
 
       - name: Deploy to GitHub Pages
         id: deployment
