@@ -49,17 +49,15 @@ jobs:
           find ./public -type l -delete  # Remove symlinks
           find ./public -type f -links +1 -exec rm {} \;  # Remove hard links
 
-      - name: Flatten Directory Before Upload
+      - name: Debug Public Folder Before Upload
         run: |
-          rsync -av --remove-source-files ./public/ ./
-          find ./public -type d -empty -delete  # Remove empty folders
-          rmdir ./public || true  # Remove empty dir if exists
+          ls -lah ./public  # Show public directory structure
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: .
+          path: ./public  # ✅ Upload only the built site
           retention-days: 1
           if-no-files-found: error
           compression-level: 0  # ⚠️ Prevents ZIP compression
@@ -76,11 +74,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: .
+          path: ./public  # ✅ Ensure it's extracted properly
 
       - name: Debug Public Directory
         run: |
-          ls -lah ./  # Show file structure in root
+          ls -lah ./public  # Show file structure inside public
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
