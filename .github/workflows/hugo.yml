@@ -73,11 +73,6 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v4  # Must be v4 for compatibility
 
-      - name: Upload to GitHub Pages
-        uses: actions/upload-artifact@v4
-        with:
-          path: ./public
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
