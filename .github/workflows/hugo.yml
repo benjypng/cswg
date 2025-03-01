@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"]  # Set a branch name to trigger deployment
+    branches: ["main"]  # Trigger deployment on push to main
   pull_request:
   workflow_dispatch:  # Allows manual trigger from Actions tab
 
@@ -48,9 +48,9 @@ jobs:
         run: hugo --minify
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2  # This ensures proper compatibility with deploy-pages
+        uses: actions/upload-artifact@v4
         with:
-          name: hugo-site  # Ensure name consistency
+          name: hugo-site  # Ensure artifact name consistency
           path: ./public
 
   # Deployment job
@@ -61,6 +61,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hugo-site  # Must match the upload artifact name
+          path: ./public
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
