@@ -51,8 +51,8 @@ jobs:
 
       - name: Flatten Directory Before Upload
         run: |
-          shopt -s dotglob
-          mv ./public/* .
+          rsync -av --remove-source-files ./public/ ./
+          find ./public -type d -empty -delete  # Remove empty folders
           rmdir ./public || true  # Remove empty dir if exists
 
       - name: Upload artifact
@@ -80,13 +80,3 @@ jobs:
 
       - name: Debug Public Directory
         run: |
-          ls -lah ./  # Show file structure in root
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v4
-        with:
-          enablement: true  # ✅ Ensure GitHub Pages is enabled before deploying
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
