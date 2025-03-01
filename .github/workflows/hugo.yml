@@ -49,6 +49,18 @@ jobs:
           find ./public -type l -delete  # Remove symlinks
           find ./public -type f -links +1 -exec rm {} \;  # Remove hard links
 
+      - name: Debug Extended Attributes
+        run: |
+          getfattr -d -R ./public || echo "No extended attributes found"
+
+      - name: Remove Extended Attributes
+        run: |
+          find ./public -exec setfattr -h -x security.capability {} \; 2>/dev/null || true
+          find ./public -exec setfattr -h -x user.* {} \; 2>/dev/null || true
+
+      - name: Fix File Ownership
+        run: sudo chown -R runner:docker ./public
+
       - name: Debug Public Folder Before Upload
         run: |
           ls -lah ./public  # Show public directory structure
