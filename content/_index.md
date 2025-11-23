@@ -23,6 +23,17 @@ From an initial group of six, we have grown to 80 members who are trained profes
 
 Our Guild encompasses a diverse group of social work professionals from various sectors, including healthcare, education, and community. Over the years, we have conducted prayer sessions, prayer experiences, talks where we share our experiences, support one another, and pray for those we serve.
 
+## Circle of Companions
+
+Circle of Companions is a mentorship initiative designed to walk alongside you as you grow in both professional confidence and spiritual depth. In this programme, experienced Catholic Social Workers offer their time, wisdom, and hearts to support you. Through meaningful conversations, shared experiences, and faith-rooted guidance, you’ll find a space to:
+
+- 🤝 Build authentic connections with a mentor
+- 🌱 Gain insights into integrating Catholic values with social work practice
+- 🕊 Reflect on your vocation and deepen your sense of purpose
+- 📚 Navigate challenges with clarity, compassion, and community
+
+Click [here](../cswg-coc.pdf) to find out more.
+
 ## Events
 
 We organise a series of events throughout the year, and would love for you to join us. Please register at the respective event pages below!
